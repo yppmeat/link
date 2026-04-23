@@ -74,7 +74,7 @@
             .staticrypt-form .staticrypt-decrypt-button {
                 text-transform: uppercase;
                 outline: 0;
-                background: #e158ad;
+                background: #de65b0;
                 width: 100%;
                 border: 0;
                 padding: 15px;
@@ -86,7 +86,7 @@
             .staticrypt-form .staticrypt-decrypt-button:hover,
             .staticrypt-form .staticrypt-decrypt-button:active,
             .staticrypt-form .staticrypt-decrypt-button:focus {
-                background: #e158ad;
+                background: #de65b0;
                 filter: brightness(92%);
             }
 
@@ -102,7 +102,7 @@
             .staticrypt-content {
                 height: 100%;
                 margin-bottom: 1em;
-                background: #f779c7;
+                background: #f779c7; .staticrypt-page, staticrypt-form { width: 500px; } .staticrypt-content {;
                 font-family: "Arial", sans-serif;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
@@ -184,7 +184,10 @@
                 <div class="staticrypt-form">
                     <div class="staticrypt-instructions">
                         <p class="staticrypt-title">裏垢へのリンク♡</p>
-                        <p>ざんね～ん♡<br />そう簡単には通さないよ？♡<br />この先に進むにはパスワード入力が必要だよ♡<br/>パスワードは本人から聞いてね♡</p>
+                        <p>ざんね～ん♡<br />
+そう簡単には通さないよ？♡<br />
+この先に進むにはパスワード入力が必要だよ♡<br />
+パスワードは本人から聞いてね♡えへ♡</p>
                     </div>
 
                     <hr class="staticrypt-hr" />
@@ -822,7 +825,7 @@ exports.init = init;
                 templateToggleAltShow = "template_toggle_show",
                 templateToggleAltHide = "template_toggle_hide",
                 isRememberEnabled = true,
-                staticryptConfig = {"staticryptEncryptedMsgUniqueVariableName":"c34c1ee128a7499281c0b13c8a6d98fdfcfa5d89c4b41a093ad5329d744b6d7941869ef0b21cc4e016d5f0fb5186154090b6d7bb07faaa0e8003ed5048a4fb37f50b9a48196f1a6251ba55dd9533dc27330b610a29309e6c0d338c8960f9f95d121cdbcfe73759ac0670a09d5d8bf2f851986fde468602e2e77f05de3f14de95ad6da23141049b46b2818b3971d4cbe6537e02db263981dceefd996c7ee74a0daf703b8e52913925bae61370374817bd864ea78f0ca6d42619515c86ce5681211a7d386cfd510d09f0ee2e5c7a4f8e75","isRememberEnabled":true,"rememberDurationInDays":0,"staticryptSaltUniqueVariableName":"2af5ae427a1d5ded5cc2b933a4e8b774"};
+                staticryptConfig = {"staticryptEncryptedMsgUniqueVariableName":"4791fd91ca2481d30ab1d42a604e23d1661b94536896107b472d8da6e1e571038bca8788aab2eebb14a768e03e1a7ca820c3a72b750e64c8184dd9fe9c103a2c2c12162a4cd4fad7ba306d963f47c2704ebd2bcd73a04695f54632a88ea30f2d43b3a53773f5cb665047464de88a0cc3db71ab1edef40f3b2cb13c665f9b3290be2bb58596b623478a56f868d35a8b0caeb5f3686b5b93790ad9e053d6f8664668dd74880ffaf855cbf14fcd3e886fd9398cb0d8933a81a94dcf3fc5a1c76ab6d58e5f4d4751375ace0d17b9b9bb2f302dcafba0aefd7a0e8fe13d56d1a24be1ca7e3b332d0c2cc971fcfe14a42359f7db625f6202caf3d74f6a78b9e046a5a6e73e24b2881c17e870874776307f0c477bf8946c59cce75de3b7056b65db9087cbe2d50ea6f873f12cfc1d6a084a32fdfcafef6ae5397241a76cf65441e55d9af8747aee142c57ca4ca18a644ff5638385381fa08d14eca61291db3362983982edc01cc8de8beadbac24f2522b31032eecaef55422b6d65e8fdf851fe4519ec5b6859dd89576b969cc9b438084616592","isRememberEnabled":true,"rememberDurationInDays":0,"staticryptSaltUniqueVariableName":"6009fa47d5e587e5e366f0ea4f4316ab"};
 
             // you can edit these values to customize some of the behavior of StatiCrypt
             const templateConfig = {
@@ -886,7 +889,7 @@ exports.init = init;
                 const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, isRememberChecked);
 
                 if (!isSuccessful) {
-                    alert("パスワード適当に入れて突破しようとしてない？♡\nだめだよ♡そんなことしちゃ♡");
+                    alert(templateError);
                 }
             });
         </script>
